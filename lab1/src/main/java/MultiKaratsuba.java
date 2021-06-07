@@ -2,7 +2,7 @@ import java.math.BigInteger;
 
 import static java.math.BigInteger.TWO;
 
-public class MultKarazuba {
+public class MultiKaratsuba {
 
     public static BigInteger karazubaMult(BigInteger x, BigInteger y) {
         int N = Math.max(x.bitLength(), y.bitLength());

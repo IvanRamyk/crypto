@@ -2,7 +2,7 @@ import java.math.BigInteger;
 
 import static java.math.BigInteger.*;
 
-public class BinPow {
+public class BinaryPow {
 
     public static BigInteger compute(BigInteger a, BigInteger b, BigInteger mod) {
         if (b.equals(ZERO))

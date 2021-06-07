@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 import java.util.Random;
 
-public class TestFerma {
+public class Ferma {
 
     private final static Random rand = new Random();
 

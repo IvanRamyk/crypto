@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ExtendedEuclidTest {
     @Test
-    void testNumbersWithGCDNotEqualsOne() {
-        var result = ExtendedEuclid.extendedAlgorithm(
+    void testGCD() {
+        var result = ExtendedEuclid.compute(
                 new BigInteger("180234567898765432123456786543245678765432456"),
                 new BigInteger("150234567890987654323456783456789034567898765432345678976")
         );
@@ -21,8 +21,8 @@ class ExtendedEuclidTest {
     }
 
     @Test
-    void testNumbersWithGCDEqualsOne() {
-        var result = ExtendedEuclid.extendedAlgorithm(
+    void testGCD1() {
+        var result = ExtendedEuclid.compute(
                 new BigInteger("1802345678987654321234567865432456787654324561"),
                 new BigInteger("150234567890987654323456783456789034567898765432345678976")
         );

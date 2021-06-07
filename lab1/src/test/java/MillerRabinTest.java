@@ -4,31 +4,31 @@ import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MillerRabinPrimalityTestTest {
+class MillerRabinTest {
 
-    private static final int certainty = 100;
+    private static final int iterations = 100;
 
 
     @Test
-    void isOnePrimeShouldReturnFalse() {
-        assertFalse(MillerRabin.isProbablePrime(BigInteger.ONE, certainty));
+    void testOne() {
+        assertFalse(MillerRabin.isPrime(BigInteger.ONE, iterations));
     }
 
     @Test
-    void isTwoPrimeShouldReturnTrue() {
-        assertTrue(MillerRabin.isProbablePrime(BigInteger.TWO, certainty));
+    void testTwo() {
+        assertTrue(MillerRabin.isPrime(BigInteger.TWO, iterations));
     }
 
     @Test
-    void negativeCertaintyAlwaysReturnFalse() {
-        assertFalse(MillerRabin.isProbablePrime(BigInteger.valueOf(13), -1));
-        assertFalse(MillerRabin.isProbablePrime(BigInteger.valueOf(1000), -1));
+    void testNegativeIterations() {
+        assertFalse(MillerRabin.isPrime(BigInteger.valueOf(13), -1));
+        assertFalse(MillerRabin.isPrime(BigInteger.valueOf(1000), -1));
     }
 
     @Test
     void zeroCertaintyAlwaysReturnFalse() {
-        assertFalse(MillerRabin.isProbablePrime(BigInteger.valueOf(13), 0));
-        assertFalse(MillerRabin.isProbablePrime(BigInteger.valueOf(1000), 0));
+        assertTrue(MillerRabin.isPrime(BigInteger.valueOf(13), 10));
+        assertFalse(MillerRabin.isPrime(BigInteger.valueOf(1000), 0));
     }
 
 

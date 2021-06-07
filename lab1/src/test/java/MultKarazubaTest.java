@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
@@ -11,19 +10,19 @@ class MultKarazubaTest {
     @Test
     void multiplicationOnZeroShouldReturnZero() {
         assertEquals(BigInteger.ZERO,
-                MultKarazuba.karazubaMult(new BigInteger("2034954578765486095"), BigInteger.ZERO));
+                MultiKaratsuba.karazubaMult(new BigInteger("2034954578765486095"), BigInteger.ZERO));
     }
 
     @Test
     void negativeNumberShouldReturnNegativeWithMultiplyingOnPositive() {
         assertEquals(new BigInteger("-500000000000000"),
-                MultKarazuba.karazubaMult(new BigInteger("-5"), new BigInteger("100000000000000")));
+                MultiKaratsuba.karazubaMult(new BigInteger("-5"), new BigInteger("100000000000000")));
     }
 
     @Test
     void negativeNumberShouldReturnPositiveWithMultiplyingOnNegative() {
         assertEquals(new BigInteger("500000000000000"),
-                MultKarazuba.karazubaMult(new BigInteger("-5"), new BigInteger("-100000000000000")));
+                MultiKaratsuba.karazubaMult(new BigInteger("-5"), new BigInteger("-100000000000000")));
     }
 
     @Test
@@ -35,7 +34,7 @@ class MultKarazubaTest {
             a = BigInteger.valueOf(Math.abs(rand.nextLong()));
             b = BigInteger.valueOf(Math.abs(rand.nextLong()));
 
-            assertEquals(a.multiply(b), MultKarazuba.karazubaMult(a, b));
+            assertEquals(a.multiply(b), MultiKaratsuba.karazubaMult(a, b));
         }
     }
 }

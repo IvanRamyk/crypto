@@ -33,15 +33,6 @@ public class XTEA {
 
 
     public String decipher(byte[] byteArray) {
-        if (byteArray.length == 0) {
-            throw new IllegalArgumentException("Data to decipher shouldn't be empty");
-        }
-        if (byteArray.length % 4 != 0) {
-            throw new IllegalArgumentException("Length should be divisible by 4");
-        }
-        if ((byteArray.length / 4) % 2 != 1) {
-            throw new IllegalArgumentException("Length shouldn't be divisible by 8");
-        }
 
         int[] buffer = new int[byteArray.length / 4];
         packToIntBuffer(byteArray, buffer, 0);
